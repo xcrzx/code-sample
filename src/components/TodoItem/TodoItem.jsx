@@ -3,15 +3,17 @@ import classnames from 'classnames'
 
 import './TodoItem.scss'
 
-const TodoItem = ({ title, completed, ...rest }) => (
-  <div {...rest} className={classnames('todo-item', completed && 'completed')}>
+const TodoItem = ({ id, title, completed, onClick, ...rest }) => (
+  <div {...rest} className={classnames('todo-item', completed && 'completed')} onClick={() => onClick(id)}>
     {title}
   </div>
 )
 
 TodoItem.propTypes = {
+  id: PropTypes.number,
   title: PropTypes.string,
   completed: PropTypes.bool,
+  onClick: PropTypes.func,
 }
 
 export default TodoItem
