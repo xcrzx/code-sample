@@ -1,6 +1,10 @@
 export default {
-  home: {
-    request: 'HOME_REQUEST',
-    response: 'HOME_RESPONSE',
+  todo: {
+    fetch: {
+      request: 'TODO_FETCH_REQUEST',
+      response: 'TODO_FETCH_RESPONSE',
+    },
+    add: 'TODO_ADD',
+    toggle: 'TODO_TOGGLE',
   },
 }

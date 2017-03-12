@@ -1,9 +1,9 @@
 import { combineReducers } from 'redux'
 
-import home from 'reducers/home'
+import todo from 'reducers/todo'
 
 const rootReducer = combineReducers({
-  home,
+  todo,
 })
 
 export default rootReducer

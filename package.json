@@ -6,6 +6,7 @@
   "scripts": {
     "start": "webpack-dev-server --progress --config config/webpack.config.js",
     "start:storybook": "start-storybook -p 9000 -c config/storybook",
+    "start:server": "node ./tools/jsonServer/",
     "build": "webpack --progress --config config/webpack.config.js",
     "test": "cross-env NODE_ENV=test jest --watch",
     "lint": "eslint --ext .js --ext .jsx ./"
