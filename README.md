@@ -1,1 +1,2 @@
-This is repository with my code samples
+This is repository with sample application
+

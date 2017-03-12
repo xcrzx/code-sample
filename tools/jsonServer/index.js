@@ -12,7 +12,7 @@ const prepareRoutes = (server, routes, port) => {
     '/api/': '/',
   }))
   routes(server)
-  server.listen(port, () => console.log(`JSON server start at ${port}`))
+  server.listen(port, () => console.log(`JSON server start at ${port}`)) // eslint-disable-line no-console
 }
 
 prepareRoutes(appServer, appRoutes, 9001)
