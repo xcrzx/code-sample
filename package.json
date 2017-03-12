@@ -21,6 +21,8 @@
   },
   "homepage": "https://github.com/xcrzx/code-sample#readme",
   "devDependencies": {
+    "@kadira/react-storybook-addon-info": "^3.3.0",
+    "@kadira/storybook": "^2.35.3",
     "babel": "^6.23.0",
     "babel-cli": "^6.23.0",
     "babel-core": "^6.23.1",
@@ -60,11 +62,11 @@
     "style-loader": "^0.13.2",
     "url-loader": "^0.5.8",
     "webpack": "^2.2.1",
-    "webpack-merge": "^4.0.0",
-    "@kadira/react-storybook-addon-info": "^3.3.0",
-    "@kadira/storybook": "^2.35.3"
+    "webpack-dev-server": "^2.4.1",
+    "webpack-merge": "^4.0.0"
   },
   "dependencies": {
+    "object-assign": "^4.1.1",
     "promise": "^7.1.1",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
