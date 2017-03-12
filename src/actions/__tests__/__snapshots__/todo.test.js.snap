@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Todo actions fetchTodos error 1`] = `
+Array [
+  Object {
+    "type": "TODO_FETCH_REQUEST",
+  },
+  Object {
+    "error": true,
+    "payload": [Error],
+    "type": "TODO_FETCH_RESPONSE",
+  },
+]
+`;
+
+exports[`Todo actions fetchTodos success 1`] = `
+Array [
+  Object {
+    "type": "TODO_FETCH_REQUEST",
+  },
+  Object {
+    "payload": Object {
+      "entities": Object {},
+    },
+    "type": "TODO_FETCH_RESPONSE",
+  },
+]
+`;
+
+exports[`Todo actions toggleTodo 1`] = `
+Array [
+  Object {
+    "payload": 0,
+    "type": "TODO_TOGGLE",
+  },
+]
+`;

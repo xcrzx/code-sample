@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Todo reducer Handles all actions 1`] = `
+Object {
+  "entities": Object {},
+  "isFetching": true,
+}
+`;
+
+exports[`Todo reducer Handles all actions 2`] = `
+Object {
+  "entities": Object {
+    "0": Object {
+      "completed": true,
+    },
+  },
+  "isFetching": false,
+}
+`;
+
+exports[`Todo reducer Handles all actions 3`] = `
+Object {
+  "entities": Object {},
+  "isFetching": false,
+}
+`;
+
+exports[`Todo reducer Handles all actions 4`] = `
+Object {
+  "entities": Object {
+    "0": Object {
+      "completed": false,
+    },
+  },
+}
+`;

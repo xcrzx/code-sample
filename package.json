@@ -56,6 +56,8 @@
     "jsx-control-statements": "^3.1.5",
     "node-sass": "^4.5.0",
     "prompt": "^1.0.0",
+    "react-addons-test-utils": "^15.4.2",
+    "redux-mock-store": "^1.2.2",
     "sass-loader": "^6.0.2",
     "style-loader": "^0.13.2",
     "url-loader": "^0.5.8",
@@ -85,8 +87,8 @@
       "jsx"
     ],
     "moduleDirectories": [
-      "<rootDir>/node_modules",
-      "<rootDir>/src"
+      "node_modules",
+      "src"
     ],
     "testPathIgnorePatterns": [
       "/node_modules/",
@@ -96,8 +98,8 @@
       "/node_modules/"
     ],
     "moduleNameMapper": {
-      "^.+\\.(css|scss)$": "config/mocks/styleMock.js",
-      "^.+\\.(json|png|jpg|gif|ttf|eot|svg)$": "config/mocks/fileMock.js"
+      "^.+\\.(css|scss)$": "<rootDir>/config/mocks/styleMock.js",
+      "^.+\\.(json|png|jpg|gif|ttf|eot|svg)$": "<rootDir>/config/mocks/fileMock.js"
     },
     "testRegex": "__tests__/.*test.jsx?$",
     "snapshotSerializers": [
