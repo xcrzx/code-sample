@@ -12,15 +12,12 @@ function scrollToTop() {
   }
 }
 
-class App extends React.Component {
-  render() {
-    return (
-      <Provider store={store}>
-        <Router onUpdate={scrollToTop}>
-          <Route exact path="/" component={HomeContainer} />
-        </Router>
-      </Provider>
-    )
-  }
-}
+const App = () => (
+  <Provider store={store}>
+    <Router onUpdate={scrollToTop}>
+      <Route exact path="/" component={HomeContainer} />
+    </Router>
+  </Provider>
+)
+
 export default App
