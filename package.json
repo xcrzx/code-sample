@@ -5,7 +5,6 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --progress --config config/webpack.config.js",
-    "start:storybook": "start-storybook -p 9000 -c config/storybook",
     "start:server": "node ./tools/jsonServer/",
     "build": "webpack --progress --config config/webpack.config.js",
     "test": "cross-env NODE_ENV=test jest --watch",
@@ -22,8 +21,6 @@
   },
   "homepage": "https://github.com/xcrzx/code-sample#readme",
   "devDependencies": {
-    "@kadira/react-storybook-addon-info": "^3.3.0",
-    "@kadira/storybook": "^2.35.3",
     "babel": "^6.23.0",
     "babel-cli": "^6.23.0",
     "babel-core": "^6.23.1",
