@@ -1,18 +1,18 @@
-const webpack = require("webpack")
+const webpack = require('webpack')
 
-const paths = require("./paths")
+const paths = require('./paths')
 
-const HOST = process.env.HOST || "localhost"
+const HOST = process.env.HOST || 'localhost'
 const PORT = process.env.PORT || 8080
 
 module.exports = {
   entry: [
-    "react-hot-loader/patch",
+    'react-hot-loader/patch',
   ],
   output: {
     publicPath: `http://${HOST}:${PORT}/`,
   },
-  devtool: "source-map",
+  devtool: 'source-map',
   devServer: {
     contentBase: paths.dist,
     historyApiFallback: true,
@@ -20,7 +20,7 @@ module.exports = {
     inline: true,
     port: PORT,
     host: HOST,
-    stats: "errors-only",
+    stats: 'errors-only',
     noInfo: false,
     overlay: {
       errors: true,
@@ -31,32 +31,32 @@ module.exports = {
     rules: [
       {
         test: /\.jsx?$/,
-        loader: "eslint-loader",
+        loader: 'eslint-loader',
         options: {
           emitWarning: true,
         },
-        enforce: "pre",
+        enforce: 'pre',
         exclude: /node_modules/,
       },
       {
         test: /\.s?css$/,
         use: [{
-          loader: "style-loader",
+          loader: 'style-loader',
           options: {
             sourceMap: true,
           },
         }, {
-          loader: "css-loader",
+          loader: 'css-loader',
           options: {
             sourceMap: true,
             minimize: true,
             autoprefixer: {
               add: true,
-              browsers: ["last 2 versions"],
+              browsers: ['last 2 versions'],
             },
           },
         }, {
-          loader: "sass-loader",
+          loader: 'sass-loader',
           options: {
             sourceMap: true,
           },

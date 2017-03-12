@@ -8,7 +8,7 @@
     "start:storybook": "start-storybook -p 9000 -c config/storybook",
     "build": "webpack --progress --config config/webpack.config.js",
     "test": "cross-env NODE_ENV=test jest --watch",
-    "lint": "eslint src --ext .js --ext .jsx"
+    "lint": "eslint --ext .js --ext .jsx ./"
   },
   "repository": {
     "type": "git",
@@ -65,6 +65,7 @@
     "@kadira/storybook": "^2.35.3"
   },
   "dependencies": {
+    "promise": "^7.1.1",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
     "react-redux": "^5.0.3",
@@ -93,6 +94,8 @@
       "^.+\\.(json|png|jpg|gif|ttf|eot|svg)$": "config/mocks/fileMock.js"
     },
     "testRegex": "__tests__/.*test.jsx?$",
-    "snapshotSerializers": ["enzyme-to-json/serializer"]
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ]
   }
 }

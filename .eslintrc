@@ -30,7 +30,6 @@
     "semi": ["error", "never"],
     "no-underscore-dangle": ["error", { "allow": ["__"] }],
     "no-console": ["warn", { "allow": ["error"] }],
-    "quotes": ["error", "double", { "avoidEscape": true , "allowTemplateLiterals" : true}],
     "max-len": ["error", 120, 4, {"ignoreComments": true, "ignoreUrls": true, "ignoreStrings": true, "ignoreTemplateLiterals": true}],
     "jsx-quotes": ["error", "prefer-double"],
     "react/require-default-props": "off",

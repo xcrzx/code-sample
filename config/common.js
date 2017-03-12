@@ -1,57 +1,57 @@
-const HtmlWebpackPlugin = require("html-webpack-plugin")
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
-const paths = require("./paths")
+const paths = require('./paths')
 
 module.exports = {
   entry: [
-    require.resolve("./polyfills"),
+    require.resolve('./polyfills'),
     paths.app,
   ],
   output: {
     path: paths.dist,
-    filename: "[name].[hash:8].js",
+    filename: '[name].[hash:8].js',
   },
   resolve: {
     modules: [
       paths.app,
-      "node_modules",
+      'node_modules',
     ],
     alias: {
       root: paths.root,
       app: paths.app,
       assets: paths.assets,
     },
-    extensions: [".js", ".jsx"],
+    extensions: ['.js', '.jsx'],
   },
   performance: {
     maxAssetSize: 10000000,
     maxEntrypointSize: 10000000,
-    hints: "warning",
+    hints: 'warning',
   },
   module: {
     rules: [
       {
         test: /\.jsx?$/,
         exclude: /node_modules/,
-        loader: "babel-loader",
+        loader: 'babel-loader',
       },
       {
         test: /\.(ico|jpg|png|gif|eot|otf|webp|svg|ttf|woff|woff2)(\?.*)?$/,
-        loader: "url-loader",
+        loader: 'url-loader',
         options: {
           limit: 10000,
-          name: "assets/[name].[hash:8].[ext]",
+          name: 'assets/[name].[hash:8].[ext]',
         },
       },
       {
         test: /\.json$/,
-        loader: "json-loader",
+        loader: 'json-loader',
       },
     ],
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: "Sample App",
+      title: 'Sample App',
       template: `${paths.app}/index.html`,
     }),
   ],
