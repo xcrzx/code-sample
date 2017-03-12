@@ -57,7 +57,6 @@
     "jsx-control-statements": "^3.1.5",
     "node-sass": "^4.5.0",
     "prompt": "^1.0.0",
-    "react-hot-loader": "^3.0.0-beta.6",
     "sass-loader": "^6.0.2",
     "style-loader": "^0.13.2",
     "url-loader": "^0.5.8",
@@ -66,13 +65,18 @@
     "webpack-merge": "^4.0.0"
   },
   "dependencies": {
+    "axios": "^0.15.3",
+    "normalize.css": "^5.0.0",
     "object-assign": "^4.1.1",
     "promise": "^7.1.1",
+    "ramda": "^0.23.0",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
+    "react-hot-loader": "^3.0.0-beta.6",
     "react-redux": "^5.0.3",
-    "react-router": "^4.0.0",
+    "react-router-dom": "^4.0.0",
     "redux": "^3.6.0",
+    "redux-actions": "^2.0.1",
     "redux-thunk": "^2.2.0"
   },
   "jest": {
