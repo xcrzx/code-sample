@@ -6,6 +6,7 @@ import { setIsFetching, unsetIsFetching, mergePayload } from './common'
 
 export const defaultState = {
   isFetching: false,
+  entities: {},
 }
 
 const todoReducer = handleActions({

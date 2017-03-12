@@ -1,0 +1,12 @@
+.todo-item {
+  padding: 20px;
+  cursor: pointer;
+
+  + .todo-item {
+    border-top: 1px solid #e1e1e1;
+  }
+
+  &.completed {
+    text-decoration: line-through;
+  }
+}
