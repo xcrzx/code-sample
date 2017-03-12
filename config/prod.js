@@ -1,8 +1,8 @@
-const webpack = require("webpack");
-const CleanWebpackPlugin = require("clean-webpack-plugin");
-const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const webpack = require("webpack")
+const CleanWebpackPlugin = require("clean-webpack-plugin")
+const ExtractTextPlugin = require("extract-text-webpack-plugin")
 
-const paths = require("./paths");
+const paths = require("./paths")
 
 module.exports = {
   bail: true,
@@ -62,4 +62,4 @@ module.exports = {
       },
     }),
   ],
-};
+}

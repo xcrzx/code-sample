@@ -1,9 +1,7 @@
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-const CopyWebpackPlugin = require("copy-webpack-plugin");
-const webpack = require("webpack");
+const HtmlWebpackPlugin = require("html-webpack-plugin")
 
-const config = { debugMode: true };
-const paths = require("./paths");
+const paths = require("./paths")
+
 module.exports = {
   entry: [
     require.resolve("./polyfills"),
@@ -53,18 +51,8 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: "Банк \"Открытие\"",
+      title: "Sample App",
       template: `${paths.app}/index.html`,
     }),
-    new CopyWebpackPlugin([{ from: "assets/favicons/*" }]),
-    new webpack.DefinePlugin({
-      "process.env": {
-        DEBUG_MODE: JSON.stringify(config.debugMode),
-      },
-    }),
-    new webpack.ContextReplacementPlugin(/moment[/\\]locale$/, /ru/),
-    new webpack.ProvidePlugin({
-      t: ["resources/i18n/t", "default"],
-    }),
   ],
-};
+}

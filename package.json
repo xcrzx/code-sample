@@ -4,7 +4,11 @@
   "description": "Just code samples",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "start": "webpack-dev-server --progress --config config/webpack.config.js",
+    "start:storybook": "start-storybook -p 9000 -c config/storybook",
+    "build": "webpack --progress --config config/webpack.config.js",
+    "test": "cross-env NODE_ENV=test jest --watch",
+    "lint": "eslint src --ext .js --ext .jsx"
   },
   "repository": {
     "type": "git",
@@ -29,7 +33,6 @@
     "babel-preset-latest": "^6.22.0",
     "babel-preset-react": "^6.23.0",
     "clean-webpack-plugin": "^0.1.15",
-    "copy-webpack-plugin": "^4.0.1",
     "cross-env": "^3.2.3",
     "css-loader": "^0.26.2",
     "enzyme": "^2.7.1",
@@ -53,7 +56,6 @@
     "node-sass": "^4.5.0",
     "prompt": "^1.0.0",
     "react-hot-loader": "^3.0.0-beta.6",
-    "redux-mock-store": "^1.2.2",
     "sass-loader": "^6.0.2",
     "style-loader": "^0.13.2",
     "url-loader": "^0.5.8",
@@ -69,5 +71,28 @@
     "react-router": "^4.0.0",
     "redux": "^3.6.0",
     "redux-thunk": "^2.2.0"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "jsx"
+    ],
+    "moduleDirectories": [
+      "<rootDir>/node_modules",
+      "<rootDir>/src"
+    ],
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "/.yarn-cache/"
+    ],
+    "transformIgnorePatterns": [
+      "/node_modules/"
+    ],
+    "moduleNameMapper": {
+      "^.+\\.(css|scss)$": "config/mocks/styleMock.js",
+      "^.+\\.(json|png|jpg|gif|ttf|eot|svg)$": "config/mocks/fileMock.js"
+    },
+    "testRegex": "__tests__/.*test.jsx?$",
+    "snapshotSerializers": ["enzyme-to-json/serializer"]
   }
 }

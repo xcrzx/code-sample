@@ -1,9 +1,9 @@
-const webpack = require("webpack");
+const webpack = require("webpack")
 
-const paths = require("./paths");
+const paths = require("./paths")
 
-const HOST = process.env.HOST || "localhost";
-const PORT = process.env.PORT || 8080;
+const HOST = process.env.HOST || "localhost"
+const PORT = process.env.PORT || 8080
 
 module.exports = {
   entry: [
@@ -68,4 +68,4 @@ module.exports = {
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NamedModulesPlugin(),
   ],
-};
+}
